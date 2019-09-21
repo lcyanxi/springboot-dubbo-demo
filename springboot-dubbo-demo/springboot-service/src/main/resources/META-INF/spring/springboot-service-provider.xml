@@ -4,6 +4,9 @@
        xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd    http://code.alibabatech.com/schema/dubbo     http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <dubbo:annotation package="com.lcyanxi.service"/>
+
     <!--当前项目在整个分布式架构里面的唯一名称，计算依赖关系的标签-->
     <dubbo:application name="springboot-service-provider" owner="lcyanxi"/>
 
@@ -17,6 +20,4 @@
 
     <!--服务发布的配置，需要暴露的服务接口-->
     <dubbo:service interface="com.lcyanxi.service.IOrderService" ref="orderService" />
-    <!--Bean bean定义-->
-    <bean id="orderService" class="com.lcyanxi.service.OrderServiceImpl"/>
 </beans>
