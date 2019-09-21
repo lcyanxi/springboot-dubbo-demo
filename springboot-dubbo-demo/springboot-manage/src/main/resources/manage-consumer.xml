@@ -15,5 +15,6 @@
 
     <!--生成一个远程服务的调用代理-->
     <dubbo:reference id="orderService" interface="com.lcyanxi.service.IOrderService"/>
+    <dubbo:reference id="orderQueryService" interface="com.lcyanxi.service.IOrderQueryService"/>
 
 </beans>

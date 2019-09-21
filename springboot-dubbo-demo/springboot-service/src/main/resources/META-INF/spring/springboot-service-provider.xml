@@ -18,6 +18,10 @@
     <!--当前服务发布所依赖的协议；webserovice、Thrift、Hessain、http-->
     <dubbo:protocol name="dubbo" port="20880"/>
 
+    <!--增加 hessian协议-->
+    <dubbo:protocol name="hessian" port="8090" server="jetty"/>
     <!--服务发布的配置，需要暴露的服务接口-->
-    <dubbo:service interface="com.lcyanxi.service.IOrderService" ref="orderService" />
+    <dubbo:service interface="com.lcyanxi.service.IOrderService" ref="orderService" protocol="dubbo"/>
+
+    <dubbo:service interface="com.lcyanxi.service.IOrderQueryService" ref="orderQueryService" protocol="hessian"/>
 </beans>
