@@ -35,6 +35,7 @@ public class UserController {
         System.out.println("获取到用户："+name+"登录");
         String message="用户:"+name+"登录成功";
 
+        System.out.println("mac 测试 >>>>>>>>>>>>>>");
 
         System.out.println("guava事件监听发送消息开始>>>>>>>>>>>>>>>>>>>>>");
         ChangeMessageEvent event=new ChangeMessageEvent();
